@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loop loop</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+
+
+		
+	<h1 class='another'>Hello</h1>
+	
+	<h2 class='another'>Hello World</h2>
+
+	<script>
+
+	
+
+(function(){
+
+	setTimeout(function domQueryA(){
+
+			//this array holds strings of different colours
+			var myArray = ['blue','pink', 'orange', 'green', 'purple']
+			console.log(myArray);
+
+			//this is an empty array that will eventually be pushed to
+			var newArray = [];
+			//this is grabbing the elements with the class name another
+			var headings = document.getElementsByClassName('another');
+
+
+			//this loop goes through the array myArray
+			for (var i = 0, max=myArray.length; i<max; i++) {
+				//each loop it pushes the 3rd index item into 
+				//the array newArray
+				newArray.push(myArray[2]);
+				console.log(newArray);
+				//this loop goes the through variable headings which
+				//is the class names another
+			for ( var i =0, max=headings.length; i<max; i++) {
+					//each loop changes the colour of the element 
+					//to the item in the newArray from the previous loop
+					headings[i].style.color = newArray;
+			}
+				}
+					
+		
+			 }, 3000);
+
+
+})()
+
+
+
+
+	</script>
+	
+</body>
+</html>
